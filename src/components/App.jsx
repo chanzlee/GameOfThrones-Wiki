@@ -1,6 +1,7 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
+import House from './House';
 
 /*
   import { Link } from 'react-router-dom';
@@ -11,14 +12,18 @@ function App(){
   var styles = {
   };
   return (
-    <div style={styles} className="jumbotron">
+    <div style={styles}>
       <style jsx>{`
         font-family: Helvetica;
       `}</style>
-      <h1>GameOfThrones</h1>
-      {/* <Switch>
-        <Route exact path='/' component={} />
-      </Switch> */}
+      <div className="jumbotron">
+        <h1>GameOfThrones</h1>
+      </div>
+      <Switch>
+        <Route path='/houses' component={House} />
+        {/* <Route path='/wiki' component={Wiki} /> */}
+        {/* <Route exact='/' component={Home}/> */}
+      </Switch>
     </div>
   );
 }

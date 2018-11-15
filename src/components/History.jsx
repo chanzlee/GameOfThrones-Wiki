@@ -10,7 +10,7 @@ const History = () => {
         return (
           <div key={index}>
             <h1>{props.title}</h1>
-            <p>{props.quote}</p>
+            <p><em>{props.quote}</em></p>
             <h4>{props.text}</h4>
           </div>
         );  

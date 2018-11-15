@@ -1,6 +1,8 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
+import NumberForces from './Numbers';
+import History from './History';
 
 /*
   import { Link } from 'react-router-dom';
@@ -15,7 +17,9 @@ function App(){
       <style jsx>{`
         font-family: Helvetica;
       `}</style>
-      <h1>GameOfThrones</h1>
+      {/* <h1>GameOfThrones</h1> */}
+      <History/>
+      <NumberForces/>
       {/* <Switch>
         <Route exact path='/' component={} />
       </Switch> */}

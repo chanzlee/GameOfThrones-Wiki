@@ -8,36 +8,42 @@ const House = () => {
   return (
 
     <div className="grid grid-zone">
-        <style jsx>{`
+      <style jsx>{`
         .grid-zone {
         display: grid;
-        grid-template-columns: repeat(4, 25%); 
-        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(3, 20%); 
+        grid-template-rows: repeat(4, auto);
         grid-column-gap: 20px;
         grid-row-gap: 50px;
-        margin-top: 6%;
+        margin-top: 5%;
+        padding-top: 5%;
         grid-auto-rows: 450px;
-        justify-items: stretch;
+        justify-items: center;
         justify-content: space-evenly;
         align-items: start;
         align-content: space-evenly;
         grid-auto-flow: row;
+        
+      }
+
+      .card {
+        border-radius: 15px;
       }
     `}
-    </style>
+      </style>
       {houses.map((house, index) => {
         return ( 
           <div key={index} className="card" style={{width: '18rem'}}>
-          <img className="card-img-top" src={house.imgURL} alt="Card image cap"/>
-          <div className="card-body">
+            <img className="card-img-top" src={house.imgURL} alt="Card image cap"/>
+            <div className="card-body">
               <h5 className="card-title">House: {house.name}</h5>
               <p className="card-text">Words: {house.words}</p>
               <p className="card-text">Region: {house.allegiance}</p>
               <p className="card-text">Strength: {house.strength} men</p>
               <Link to="#" className="btn btn-primary">View detail</Link>
             </div>
-        </div>
-      )})}
+          </div>
+        );})}
     </div>
   );
 };

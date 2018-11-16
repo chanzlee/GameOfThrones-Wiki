@@ -6,6 +6,8 @@ import NumberForces from './Numbers';
 import History from './History';
 
 import House from './House';
+import Navbar from './NavBar';
+import Home from './Home';
 
 
 /*
@@ -14,30 +16,44 @@ import House from './House';
 */
 
 function App(){
-  var styles = {
-  };
+
   return (
-    <div style={styles}>
-      <style jsx>{`
-        font-family: Helvetica;
-      `}</style>
+    <div>
+      <style global jsx >{`
+        @import url('https://fonts.googleapis.com/css?family=Cinzel:400,700');
+        * {
+          font-family: 'Cinzel', serif;
+          border-radius: 10px;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center;  
+          background-size: cover;
+        }
 
-      {/* <h1>GameOfThrones</h1> */}
+        body {
+          background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2018/02/Game-of-Thrones-Map-Room.jpg");
+        }
 
-      {/* <Switch>
-        <Route exact path='/' component={} />
-      </Switch> */}
+        div.container {
+          margin-top: 5%;
+          background-color: #ccc;
+        }
 
-      <div className="jumbotron">
-        <h1>GameOfThrones</h1>
+        `}
+      </style>
+
+      <Navbar/>
+      <div className="container">
+        {/* <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2018/02/Game-of-Thrones-Map-Room.jpg" alt=""/> */}
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/houses' component={House} />
+          <Route path='/history' component={History} />
+          <Route path='/forces' component={NumberForces} />
+          {/* <Route path='/wiki' component={Wiki} /> */}
+          {/* <Route exact='/' component={Home}/> */}
+        </Switch>
       </div>
-      <Switch>
-        <Route path='/houses' component={House} />
-        <Route path='/history' component={History} />
-        <Route path='/forces' component={NumberForces} />
-        {/* <Route path='/wiki' component={Wiki} /> */}
-        {/* <Route exact='/' component={Home}/> */}
-      </Switch>
     </div>
   );
 }

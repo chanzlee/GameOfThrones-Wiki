@@ -8,6 +8,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
+
+                
       <HashRouter>
         <Component/>
       </HashRouter>

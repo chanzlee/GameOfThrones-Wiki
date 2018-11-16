@@ -17,6 +17,6 @@ const History = () => {
       })}
     </div>
   );
-}
+};
  
 export default History;

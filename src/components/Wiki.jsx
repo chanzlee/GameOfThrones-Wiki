@@ -9,6 +9,6 @@ const Wiki = () => {
       <NumberForces/>
     </div>
   );
-}
+};
  
 export default Wiki;

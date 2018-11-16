@@ -14,9 +14,3 @@ Wiki Rebuild of the popular HBO show, Game of Thrones, and its famous battle sce
 
 ![Screenshot](screenshot.png)
 ![Screenshot](screenshot2.png)
-
-This site displays features such as: firebase database, firebase deployment, HTML, CSS.
-
-Firebase Link: https://join-me-rebuild.firebaseapp.com/ 
-
-In the future additions: parsing data through subscribe() to specify placement on site rebuild, implement pseudo login, future css.
